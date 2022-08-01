@@ -180,11 +180,6 @@ const RegistrationForm = () => {
 				setIsFormValidated(true);
 			} catch (error) {
 				setRegistrationError(error.data.message);
-				setFormErrors(prevState => ({
-					...prevState,
-					useremail: true,
-					userphone: true,
-				}));
 			}
 		} else {
 			setIsFormValidated(false);
@@ -279,6 +274,12 @@ const RegistrationForm = () => {
 							handlePhotoUpload={handlePhotoUpload}
 						/>
 
+						{registrationError && (
+							<p className='error' style={{ marginTop: 10 }}>
+								{registrationError}
+							</p>
+						)}
+
 						{!isUserLoading ? (
 							<Button
 								text='Sign up'
@@ -287,11 +288,6 @@ const RegistrationForm = () => {
 							/>
 						) : (
 							<Loader />
-						)}
-						{registrationError && (
-							<p className='error' style={{ marginTop: 10 }}>
-								{registrationError}
-							</p>
 						)}
 					</form>
 				</>
