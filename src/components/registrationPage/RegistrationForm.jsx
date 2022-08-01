@@ -275,7 +275,6 @@ const RegistrationForm = () => {
 
 						<PhotoUpload
 							userPhotoError={userPhotoError}
-							userPhotoFile={userPhotoFile}
 							userPhotoName={userPhotoName}
 							handlePhotoUpload={handlePhotoUpload}
 						/>

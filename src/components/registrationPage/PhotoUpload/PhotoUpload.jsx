@@ -1,11 +1,6 @@
 import './photoUpload.scss';
 
-const PhotoUpload = ({
-	userPhotoError,
-	userPhotoFile,
-	userPhotoName,
-	handlePhotoUpload,
-}) => {
+const PhotoUpload = ({ userPhotoError, userPhotoName, handlePhotoUpload }) => {
 	return (
 		<div className={`photo-input-wrapper${userPhotoError ? ' error' : ''}`}>
 			<label
