@@ -275,7 +275,7 @@ const RegistrationForm = () => {
 						/>
 
 						{registrationError && (
-							<p className='error' style={{ marginTop: 10 }}>
+							<p className='error' style={{ marginBottom: 10 }}>
 								{registrationError}
 							</p>
 						)}
