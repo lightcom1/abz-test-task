@@ -1,0 +1,68 @@
+@import '../../mixins';
+
+.user-card {
+	height: 254px;
+	width: 370px;
+	background-color: #fff;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+
+	@include lg {
+		width: 282px;
+	}
+	@include md {
+		width: 344px;
+	}
+	@include sm {
+		width: 328px;
+	}
+
+	&__photo {
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	&__name {
+		margin: 20px 0;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__info {
+		text-align: center;
+		max-width: 100%;
+		position: relative;
+
+		.email-tootlip {
+			position: absolute;
+			color: #fff;
+			max-width: 300px;
+			overflow: hidden;
+			word-wrap: break-word;
+			z-index: 5;
+			top: 80%;
+			left: 50%;
+			transform: translateX(-50%);
+			background: rgba(0, 0, 0, 0.87);
+			border-radius: 4px;
+			padding: 3px 16px;
+		}
+
+		&--email,
+		&--position {
+			max-width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		&--email {
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,74 @@
+@import '../../mixins';
+
+input[type='file'] {
+	display: none;
+}
+
+.photo-input-wrapper {
+	border: 1px solid #d0cfcf;
+	height: 54px;
+	width: 380px;
+	color: #000;
+	border-radius: 4px;
+	position: relative;
+	margin-top: 47px;
+	margin-bottom: 50px;
+
+	@include sm {
+		width: 328px;
+	}
+	
+	.photo-upload {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid rgba(0, 0, 0, 0.87);
+		border-radius: 4px 0px 0px 4px;
+		height: 54px;
+		position: relative;
+		top: -1px;
+		left: -1px;
+		cursor: pointer;
+		width: 83px;
+
+		&::after {
+			content: attr(data-file);
+			overflow: hidden;
+			max-width: 281px;
+			text-overflow: ellipsis;
+			position: absolute;
+			left: 100%;
+			white-space: nowrap;
+			padding-left: 16px;
+			color: #7e7e7e;
+			line-height: 26px;
+
+			@include sm {
+				width: 229px;
+			}
+		}
+
+		&.filled::after {
+			color: rgba(0, 0, 0, 0.87);
+		}
+	}
+
+	&.error {
+		border: 2px solid #cb3d40;
+
+		.photo-upload {
+			border: 2px solid #cb3d40;
+			top: -2px;
+			left: -2px;
+		}
+	}
+
+	.helper-text {
+		font-size: 12px;
+		line-height: 14px;
+		position: absolute;
+		left: 16px;
+		margin-top: 4px;
+		color: #cb3d40;
+	}
+}

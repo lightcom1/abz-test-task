@@ -1,0 +1,124 @@
+@import 'components/mixins';
+
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Nunito'), url('./font/nunito-v25-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+			url('./font/nunito-v25-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	@include md {
+		cursor: default !important;
+	}
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	scroll-behavior: smooth;
+	font-size: 100%;
+	line-height: 1;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.87);
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+p {
+	line-height: 26px;
+}
+body {
+	font-family: 'Nunito', sans-serif;
+	background-color: #f8f8f8;
+	min-height: 100vh;
+	overflow-x: hidden;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+::-webkit-scrollbar {
+	width: 9px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #f4e041;
+	border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #ffe302;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1170px;
+	min-height: 100vh;
+
+	@include lg {
+		width: 1024px;
+	}
+	@include md {
+		width: 768px;
+	}
+	@include sm {
+		max-width: 100%;
+	}
+}

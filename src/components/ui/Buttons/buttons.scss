@@ -1,0 +1,77 @@
+$base-color: #f4e041;
+$hover-color: #ffe302;
+$disabled-color: #B4B4B4;
+
+.primary-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $base-color;
+	border-radius: 80px;
+	width: 100px;
+	height: 34px;
+	user-select: none;
+
+	&[href='#showmore'] {
+		width: 120px;
+	}
+
+	&:hover {
+		background: $hover-color;
+	}
+
+	&.disabled {
+		background: $disabled-color;
+		color: rgba(255, 255, 255, 0.87);
+		pointer-events: none;
+	}
+}
+
+.radio-button {
+	height: 26px;
+	display: flex;
+	align-items: center;
+
+	&-position {
+		appearance: none;
+
+		&:checked + label::after {
+			transform: translateY(-50%) scale(1);
+		}
+		&:checked + label::before {
+			border: 1px solid #00bdd3;
+		}
+	}
+
+	label {
+		cursor: pointer;
+		position: relative;
+		padding-left: 32px;
+		user-select: none;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 20px;
+			width: 20px;
+			border: 1px solid #d0cfcf;
+			transition: border 0.3s ease;
+			border-radius: 50%;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			left: 5px;
+			top: 50%;
+			transform: translateY(-50%) scale(0);
+			transition: transform 0.3s ease;
+			height: 10px;
+			width: 10px;
+			border-radius: 50%;
+			background: #00bdd3;
+		}
+	}
+}

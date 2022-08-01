@@ -1,0 +1,19 @@
+.success-modal-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 50px;
+	transform: scale(0.6);
+	animation: popup 0.5s ease-in-out forwards;
+
+	.modal-title {
+		font-size: 40px;
+	}
+}
+
+@keyframes popup {
+	to {
+		transform: scale(1);
+	}
+}

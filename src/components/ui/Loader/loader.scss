@@ -1,0 +1,11 @@
+svg {
+	display: block;
+	margin: 50px auto 0;
+	animation: rotation .5s linear infinite;
+}
+
+@keyframes rotation {
+	to {
+		transform: rotate(360deg);
+	}
+}

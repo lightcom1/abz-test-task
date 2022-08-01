@@ -1,0 +1,60 @@
+@import '../mixins';
+
+.POST-section {
+	padding: 70px 0 100px;
+	position: relative;
+	min-height: 50vh;
+
+	@include lg {
+		padding: 70px 60px 100px;
+	}
+	@include md {
+		padding: 70px 32px 100px;
+	}
+	@include sm {
+		padding: 70px 16px 100px;
+	}
+
+	.title {
+		font-size: 40px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.form {
+		width: 380px;
+		margin: 0 auto;
+		animation: popup 0.5s ease-in-out forwards;
+		transform: scale(0.8);
+
+		@include sm {
+			width: 328px;
+		}
+
+		.error {
+			text-align: center;
+			color: #cb3d40;
+		}
+
+		.positions {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+
+			.radio-button:not(:first-of-type) {
+				margin-top: 7px;
+			}
+		}
+
+		.primary-btn {
+			margin: 0 auto;
+		}
+	}
+}
+
+@keyframes popup {
+	to {
+		transform: scale(1);
+	}
+}

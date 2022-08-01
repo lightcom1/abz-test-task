@@ -1,0 +1,39 @@
+@import '../../mixins';
+
+.nav {
+	background-color: #fff;
+	width: 100vw;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+
+	&-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: min(100%, 1170px);
+		padding: 13px 0;
+
+		@include lg {
+			width: 1024px;
+			padding: 13px 60px;
+		}
+		@include md {
+			width: 768px;
+			padding: 13px 32px;
+		}
+		@include sm {
+			width: 360px;
+			padding: 13px 16px;
+		}
+	}
+
+	&-buttons {
+		display: flex;
+		align-items: center;
+		column-gap: 10px;
+	}
+}
